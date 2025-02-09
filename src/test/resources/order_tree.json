@@ -7,11 +7,11 @@
     { "name": "Version", "value": "1003", "operation": "NO_ACTION" }
   ],
   "children": [
-    { "identifier ": "id-1",
+    { "identifier": "id-1",
       "brickId": "ONLY_IN_INITIAL",
       "operation": "DELETE",
       "attributes": [
-        { "name": "ServiceId", "value": "serviceId-3", "operation": "DELETE" }
+        { "name": "ServiceId", "value": "serviceId-1", "operation": "DELETE" }
       ],
       "relations": [ "id-2" ]
     }, {
