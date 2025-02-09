@@ -1,4 +1,4 @@
-package com.swisscom;
+package com.swisscom.tcsp;
 
 public class Main {
     public static void main(String[] args) {
