@@ -7,6 +7,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.io.File;
+import java.io.InputStream;
 import java.util.Optional;
 
 public class Main {
@@ -16,14 +17,21 @@ public class Main {
     public static void main(String[] args) {
         ObjectMapper mapper = new ObjectMapper();
         try {
-            File initialFile = new File("src/main/resources/initial_tree.json");
-            File newFile = new File("src/main/resources/new_tree.json");
+            InputStream initialIS = Main.class.getResourceAsStream("/initial_tree.json");
+            if (initialIS == null) {
+                logger.error("initial_tree.json not found on the classpath.");
+                return;
+            }
+            logger.info("Reading initial JSON from classpath resource: /initial_tree.json");
+            TreeItem initialTree = mapper.readValue(initialIS, TreeItem.class);
 
-            logger.info("Reading initial JSON from {}", initialFile.getAbsolutePath());
-            TreeItem initialTree = mapper.readValue(initialFile, TreeItem.class);
-
-            logger.info("Reading new JSON from {}", newFile.getAbsolutePath());
-            TreeItem newTree = mapper.readValue(newFile, TreeItem.class);
+            InputStream newIS = Main.class.getResourceAsStream("/new_tree.json");
+            if (newIS == null) {
+                logger.error("new_tree.json not found on the classpath.");
+                return;
+            }
+            logger.info("Reading new JSON from classpath resource: /new_tree.json");
+            TreeItem newTree = mapper.readValue(newIS, TreeItem.class);
 
             Optional<TreeItem> comparedTreeOpt = TreeComparator.compareNodes(initialTree, newTree);
 
