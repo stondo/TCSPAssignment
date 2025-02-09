@@ -1,0 +1,590 @@
+{
+    "id" : "accountRootServiceId",
+    "type" : "CFS_TC_ACCOUNT_ROOT",
+    "attributes" : [ {
+      "name" : "ServiceId",
+      "value" : "accountRootServiceId"
+    }, {
+      "name" : "Version",
+      "value" : "1003"
+    }, {
+      "name" : "VsrVersion",
+      "value" : "2.0"
+    }, {
+      "name" : "FirewallType",
+      "value" : "keni"
+    }, {
+      "name" : "Stack",
+      "value" : "EWANV"
+    }, {
+      "name" : "AllegroRootProductId",
+      "value" : "agro-1"
+    }, {
+      "name" : "CompanyIndex",
+      "value" : "companyIndex"
+    }, {
+      "name" : "AgreementId",
+      "value" : "agreementId"
+    }, {
+      "name" : "NetId",
+      "value" : "n0"
+    } ],
+    "children" : [ {
+      "id" : "7",
+      "type" : "CFS_TC_PRIVATE_IP_RANGE",
+      "attributes" : [ {
+        "name" : "ServiceId",
+        "value" : "7"
+      }, {
+        "name" : "RangeId",
+        "value" : "7"
+      }, {
+        "name" : "Ip",
+        "value" : "192.168.0.0"
+      }, {
+        "name" : "Cidr",
+        "value" : "16"
+      }, {
+        "name" : "Usage",
+        "value" : "global"
+      } ]
+    }, {
+      "id" : "6",
+      "type" : "CFS_CA_CERTIFICATE",
+      "attributes" : [ {
+        "name" : "ServiceId",
+        "value" : "6"
+      }, {
+        "name" : "CertName",
+        "value" : "CA_6"
+      }, {
+        "name" : "CertSerialNumber",
+        "value" : "certSerialNumber-test"
+      } ]
+    }, {
+      "id" : "10",
+      "type" : "CFS_TC_ACCOUNT",
+      "attributes" : [ {
+        "name" : "ServiceId",
+        "value" : "10"
+      } ],
+      "children" : [ {
+        "id" : "3",
+        "type" : "CFS_FOS",
+        "attributes" : [ {
+          "name" : "ServiceId",
+          "value" : "3"
+        }, {
+          "name" : "Hostname",
+          "value" : "Hostname"
+        }, {
+          "name" : "AccessToken",
+          "value" : "AccessToken"
+        }, {
+          "name" : "FosVersion",
+          "value" : "FosR6"
+        }, {
+          "name" : "LicenseAntiVirus",
+          "value" : "false"
+        }, {
+          "name" : "LicenseWebFilter",
+          "value" : "false"
+        } ],
+        "relations" : [ "6" ],
+        "children" : [ {
+          "id" : "5",
+          "type" : "CFS_FOS_FW_RULES",
+          "attributes" : [ {
+            "name" : "ServiceId",
+            "value" : "5"
+          }, {
+            "name" : "Rules",
+            "value" : "{\"rules\":[{\"sonataIdentifier\":\"link-JCWA-->n5\",\"name\":\"484F7D0ABEB4A4D36E731CEDDA53206E\",\"srcintf\":\"n0_JCWA\",\"dstintf\":\"shared\",\"action\":\"accept\",\"status\":\"enable\",\"schedule\":\"always\",\"logtraffic\":\"disable\",\"logtraffic-start\":\"disable\",\"srcaddr-negate\":\"disable\",\"dstaddr-negate\":\"disable\",\"service-negate\":\"disable\"},{\"sonataIdentifier\":\"link-n1-->n5\",\"name\":\"FA818C8BD294382B74EAD21BE9F918B2\",\"srcintf\":\"topdown-serviceId-7_1\",\"dstintf\":\"shared\",\"action\":\"accept\",\"status\":\"enable\",\"schedule\":\"always\",\"logtraffic\":\"disable\",\"logtraffic-start\":\"disable\",\"srcaddr-negate\":\"disable\",\"dstaddr-negate\":\"disable\",\"service-negate\":\"disable\"},{\"sonataIdentifier\":\"UnifiedRule-GlobalCleanup\",\"name\":\"4C041ED9BB88BB0E5A6476D7483059DB\",\"srcintf\":\"any\",\"dstintf\":\"any\",\"action\":\"deny\",\"status\":\"enable\",\"schedule\":\"always\",\"logtraffic\":\"none\",\"logtraffic-start\":\"disable\",\"srcaddr-negate\":\"disable\",\"dstaddr-negate\":\"disable\",\"service-negate\":\"disable\"}],\"webFilterProfiles\":[],\"safeSearchProfiles\":[],\"sslSshProfiles\":[],\"avProfiles\":[],\"schedules\":[],\"vipObjects\":[],\"groups\":[{\"name\":\"grp-gsr-BASIP-HET_2C93CD699F9F3E\",\"addresses\":[{\"type\":\"fqdn\",\"fqdn\":\"was1.join.swisscom.ch\",\"name\":\"gsr-fqdn-was1.join.swisscom.ch\"},{\"type\":\"fqdn\",\"fqdn\":\"was2.join.swisscom.ch\",\"name\":\"gsr-fqdn-was2.join.swisscom.ch\"},{\"type\":\"fqdn\",\"fqdn\":\"was3.join.swisscom.ch\",\"name\":\"gsr-fqdn-was3.join.swisscom.ch\"}]}]}"
+          }, {
+            "name" : "RulesSonata",
+            "value" : "{\"rules\":[{\"sonataIdentifier\":\"link-JCWA-->n5\",\"srcintf\":\"n0_JCWA\",\"dstintf\":\"shared\",\"action\":\"accept\",\"status\":\"enable\",\"schedule\":\"always\",\"logtraffic\":\"disable\",\"logtraffic-start\":\"disable\",\"srcaddr-negate\":\"disable\",\"dstaddr-negate\":\"disable\",\"service-negate\":\"disable\"},{\"sonataIdentifier\":\"link-n1-->n5\",\"srcintf\":\"topdown-serviceId-7_1\",\"dstintf\":\"shared\",\"action\":\"accept\",\"status\":\"enable\",\"schedule\":\"always\",\"logtraffic\":\"disable\",\"logtraffic-start\":\"disable\",\"srcaddr-negate\":\"disable\",\"dstaddr-negate\":\"disable\",\"service-negate\":\"disable\"},{\"sonataIdentifier\":\"UnifiedRule-GlobalCleanup\",\"srcintf\":\"any\",\"dstintf\":\"any\",\"action\":\"deny\",\"status\":\"enable\",\"schedule\":\"always\",\"logtraffic\":\"none\",\"logtraffic-start\":\"disable\",\"srcaddr-negate\":\"disable\",\"dstaddr-negate\":\"disable\",\"service-negate\":\"disable\"}],\"webFilterProfiles\":[],\"safeSearchProfiles\":[],\"sslSshProfiles\":[],\"avProfiles\":[],\"schedules\":[],\"vipObjects\":[],\"groups\":[{\"name\":\"grp-gsr-BASIP-HET_2C93CD699F9F3E\",\"addresses\":[{\"type\":\"fqdn\",\"fqdn\":\"was1.join.swisscom.ch\",\"name\":\"gsr-fqdn-was1.join.swisscom.ch\"},{\"type\":\"fqdn\",\"fqdn\":\"was2.join.swisscom.ch\",\"name\":\"gsr-fqdn-was2.join.swisscom.ch\"},{\"type\":\"fqdn\",\"fqdn\":\"was3.join.swisscom.ch\",\"name\":\"gsr-fqdn-was3.join.swisscom.ch\"}]}]}"
+          } ]
+        } ]
+      }, {
+        "id" : "topdown-serviceId-7",
+        "type" : "CFS_VPN",
+        "attributes" : [ {
+          "name" : "ServiceId",
+          "value" : "topdown-serviceId-7"
+        }, {
+          "name" : "Name",
+          "value" : "corp"
+        }, {
+          "name" : "Default",
+          "value" : "true"
+        }, {
+          "name" : "SonataType",
+          "value" : "GroupIntegrator"
+        }, {
+          "name" : "NetId",
+          "value" : "n1"
+        } ],
+        "children" : [ {
+          "id" : "topdown-serviceId-9",
+          "type" : "CFS_INTEGRATION_VRF",
+          "attributes" : [ {
+            "name" : "ServiceId",
+            "value" : "topdown-serviceId-9"
+          }, {
+            "name" : "Description",
+            "value" : "CORP-n1:INTEGRATOR"
+          }, {
+            "name" : "InterfaceGroupName",
+            "value" : "topdown-serviceId-7_1"
+          } ],
+          "children" : [ {
+            "id" : "link2fw-serviceId-10",
+            "type" : "CFS_LINK_TO_FIREWALL",
+            "attributes" : [ {
+              "name" : "ServiceId",
+              "value" : "link2fw-serviceId-10"
+            }, {
+              "name" : "FirewallType",
+              "value" : "fos"
+            }, {
+              "name" : "DefaultRouteFromFirewall",
+              "value" : "permit"
+            }, {
+              "name" : "DefaultRouteToFirewall",
+              "value" : "deny"
+            } ]
+          } ]
+        }, {
+          "id" : "24",
+          "type" : "CFS_LINK",
+          "attributes" : [ {
+            "name" : "ServiceId",
+            "value" : "24"
+          }, {
+            "name" : "LinkType",
+            "value" : "rule"
+          } ],
+          "relations" : [ "dnsIntegration" ]
+        } ]
+      }, {
+        "id" : "0d9e494247d4408cbdad0c5c4c6adf73",
+        "type" : "CFS_VPN",
+        "attributes" : [ {
+          "name" : "ServiceId",
+          "value" : "0d9e494247d4408cbdad0c5c4c6adf73"
+        }, {
+          "name" : "Name",
+          "value" : "Accounting"
+        }, {
+          "name" : "Default",
+          "value" : "false"
+        }, {
+          "name" : "SonataType",
+          "value" : "GroupIntegrator"
+        }, {
+          "name" : "NetId",
+          "value" : "JCWA"
+        } ],
+        "children" : [ {
+          "id" : "07e71226528341f7b77ccc25a09132d5",
+          "type" : "CFS_INTEGRATION_VRF",
+          "attributes" : [ {
+            "name" : "ServiceId",
+            "value" : "07e71226528341f7b77ccc25a09132d5"
+          }, {
+            "name" : "Description",
+            "value" : "GOI-JCWA:INTEGRATOR"
+          }, {
+            "name" : "InterfaceGroupName",
+            "value" : "n0_JCWA"
+          } ],
+          "children" : [ {
+            "id" : "b29f1c5a-4be2-4b48-9311-6f419594943b",
+            "type" : "CFS_LINK_TO_FIREWALL",
+            "attributes" : [ {
+              "name" : "FirewallType",
+              "value" : "fos"
+            }, {
+              "name" : "DefaultRouteFromFirewall",
+              "value" : "permit"
+            }, {
+              "name" : "DefaultRouteToFirewall",
+              "value" : "deny"
+            } ]
+          } ]
+        }, {
+          "id" : "9ad4898a-1730-449b-b017-1ef2be698064",
+          "type" : "CFS_LINK",
+          "attributes" : [ {
+            "name" : "LinkType",
+            "value" : "rule"
+          } ],
+          "relations" : [ "dnsIntegration" ]
+        } ]
+      }, {
+        "id" : "dnsIntegration",
+        "type" : "CFS_SHARED_GROUP",
+        "attributes" : [ {
+          "name" : "ServiceId",
+          "value" : "serviceId-2"
+        }, {
+          "name" : "InterfaceGroupName",
+          "value" : "shared"
+        }, {
+          "name" : "NetId",
+          "value" : "n5"
+        } ],
+        "children" : [ {
+          "id" : "2",
+          "type" : "CFS_LINK_TO_FIREWALL",
+          "attributes" : [ {
+            "name" : "ServiceId",
+            "value" : "2"
+          }, {
+            "name" : "FirewallType",
+            "value" : "fos"
+          }, {
+            "name" : "DefaultRouteFromFirewall",
+            "value" : "permit"
+          }, {
+            "name" : "DefaultRouteToFirewall",
+            "value" : "deny"
+          } ]
+        }, {
+          "id" : "1",
+          "type" : "CFS_DNS_SERVER",
+          "attributes" : [ {
+            "name" : "ServiceId",
+            "value" : "1"
+          } ]
+        } ]
+      }, {
+        "id" : "11",
+        "type" : "CFS_LE_GROUP",
+        "attributes" : [ {
+          "name" : "ServiceId",
+          "value" : "11"
+        }, {
+          "name" : "DefaultVlanTag",
+          "value" : "1"
+        }, {
+          "name" : "Description",
+          "value" : "CORP-n1:ACCESS"
+        }, {
+          "name" : "TechnicalName",
+          "value" : "n0_n1a"
+        }, {
+          "name" : "Default",
+          "value" : "true"
+        } ],
+        "relations" : [ "topdown-serviceId-7" ]
+      }, {
+        "id" : "347f152864a947238562fd85ec05817e",
+        "type" : "CFS_LE_GROUP",
+        "attributes" : [ {
+          "name" : "ServiceId",
+          "value" : "347f152864a947238562fd85ec05817e"
+        }, {
+          "name" : "DefaultVlanTag",
+          "value" : "1101"
+        }, {
+          "name" : "Description",
+          "value" : "GOI-JCWA:ACCESS"
+        }, {
+          "name" : "TechnicalName",
+          "value" : "n0_JCWAa"
+        }, {
+          "name" : "Default",
+          "value" : "false"
+        } ],
+        "relations" : [ "0d9e494247d4408cbdad0c5c4c6adf73" ]
+      } ]
+    }, {
+      "id" : "15",
+      "type" : "CFS_TC_SITE_ROOT",
+      "attributes" : [ {
+        "name" : "ServiceId",
+        "value" : "15"
+      }, {
+        "name" : "SiteType",
+        "value" : "S"
+      } ],
+      "children" : [ {
+        "id" : "17",
+        "type" : "CFS_TC_ACCESS",
+        "attributes" : [ {
+          "name" : "ServiceId",
+          "value" : "17"
+        }, {
+          "name" : "ServiceUserId",
+          "value" : "serviceUserId-0"
+        }, {
+          "name" : "Connectivity",
+          "value" : "wire"
+        }, {
+          "name" : "LoopBackIp",
+          "value" : "10.0.0.23"
+        }, {
+          "name" : "PrimaryNonSecOvlIp",
+          "value" : "10.0.0.42"
+        }, {
+          "name" : "PortMapping",
+          "value" : "[{\"number\":1,\"vlanMode\":\"trunk\",\"type\":\"LAN\",\"vlanTags\":[1]},{\"number\":2,\"vlanMode\":\"trunk\",\"type\":\"LAN\",\"vlanTags\":[1]},{\"number\":3,\"vlanMode\":\"trunk\",\"type\":\"LAN\",\"vlanTags\":[1]},{\"number\":4,\"vlanMode\":\"trunk\",\"type\":\"LAN\",\"vlanTags\":[1]}]"
+        }, {
+          "name" : "PortMappingSonata",
+          "value" : "[{\"number\":1,\"customPortConfiguration\":{\"allVlans\":false,\"pwlanTagged\":false,\"untaggedVlanId\":\"20\",\"taggedVlanIds\":[]},\"lowEndPortMode\":\"custom\",\"portMode\":\"CUSTOM\"},{\"number\":2,\"customPortConfiguration\":{\"allVlans\":false,\"pwlanTagged\":false,\"untaggedVlanId\":\"20\",\"taggedVlanIds\":[]},\"lowEndPortMode\":\"custom\",\"portMode\":\"CUSTOM\"},{\"number\":3,\"customPortConfiguration\":{\"allVlans\":false,\"pwlanTagged\":false,\"untaggedVlanId\":\"20\",\"taggedVlanIds\":[]},\"lowEndPortMode\":\"custom\",\"portMode\":\"CUSTOM\"},{\"number\":4,\"customPortConfiguration\":{\"allVlans\":false,\"pwlanTagged\":false,\"untaggedVlanId\":\"20\",\"taggedVlanIds\":[]},\"lowEndPortMode\":\"custom\",\"portMode\":\"CUSTOM\"}]"
+        }, {
+          "name" : "WifiMapping",
+          "value" : "[]"
+        }, {
+          "name" : "QosEnabled",
+          "value" : "false"
+        } ],
+        "children" : [ {
+          "id" : "21",
+          "type" : "CFS_TC_VLAN",
+          "attributes" : [ {
+            "name" : "ServiceId",
+            "value" : "21"
+          }, {
+            "name" : "VNI",
+            "value" : "vni"
+          }, {
+            "name" : "CpeIp",
+            "value" : "192.168.1.3"
+          }, {
+            "name" : "VpeIp",
+            "value" : "192.168.1.2"
+          }, {
+            "name" : "NetworkIp",
+            "value" : "192.168.1.0"
+          }, {
+            "name" : "NetworkCidr",
+            "value" : "24"
+          }, {
+            "name" : "VlanTag",
+            "value" : "1"
+          }, {
+            "name" : "VoiceGoi",
+            "value" : "false"
+          }, {
+            "name" : "DhcpEnabled",
+            "value" : "true"
+          }, {
+            "name" : "DhcpRangeStart",
+            "value" : "192.168.1.33"
+          }, {
+            "name" : "DhcpRangeEnd",
+            "value" : "192.168.1.127"
+          }, {
+            "name" : "DnsServerPrimary",
+            "value" : "192.168.1.201"
+          }, {
+            "name" : "DnsServerSecondary",
+            "value" : "192.168.1.202"
+          }, {
+            "name" : "DhcpLeaseTime",
+            "value" : "3600"
+          }, {
+            "name" : "CustomerDomainName",
+            "value" : "myDomain"
+          }, {
+            "name" : "MergedOptionNumbers",
+            "value" : "42"
+          }, {
+            "name" : "MergedOptionTypes",
+            "value" : "ip-address"
+          }, {
+            "name" : "MergedOptionValues",
+            "value" : "192.168.1.2"
+          } ],
+          "relations" : [ "20", "11" ]
+        }, {
+          "id" : "a359d4c166aa4788ba7e04ced4edaad7",
+          "type" : "CFS_TC_VLAN",
+          "attributes" : [ {
+            "name" : "ServiceId",
+            "value" : "a359d4c166aa4788ba7e04ced4edaad7"
+          }, {
+            "name" : "VpeIp",
+            "value" : "192.168.2.2"
+          }, {
+            "name" : "NetworkIp",
+            "value" : "192.168.2.0"
+          }, {
+            "name" : "NetworkCidr",
+            "value" : "24"
+          }, {
+            "name" : "VlanTag",
+            "value" : "1100"
+          }, {
+            "name" : "VoiceGoi",
+            "value" : "false"
+          }, {
+            "name" : "DhcpEnabled",
+            "value" : "true"
+          }, {
+            "name" : "DhcpRangeStart",
+            "value" : "192.168.2.33"
+          }, {
+            "name" : "DhcpRangeEnd",
+            "value" : "192.168.2.127"
+          }, {
+            "name" : "DnsServerPrimary",
+            "value" : "192.168.2.201"
+          }, {
+            "name" : "DnsServerSecondary",
+            "value" : "192.168.2.202"
+          }, {
+            "name" : "DhcpLeaseTime",
+            "value" : "3600"
+          }, {
+            "name" : "CustomerDomainName",
+            "value" : "myDomain"
+          }, {
+            "name" : "MergedOptionNumbers",
+            "value" : "42"
+          }, {
+            "name" : "MergedOptionTypes",
+            "value" : "ip-address"
+          }, {
+            "name" : "MergedOptionValues",
+            "value" : "192.168.2.2"
+          } ],
+          "relations" : [ "22", "347f152864a947238562fd85ec05817e" ]
+        } ]
+      }, {
+        "id" : "18",
+        "type" : "CFS_LE_SITE_CONNECTION",
+        "attributes" : [ {
+          "name" : "ServiceId",
+          "value" : "18"
+        } ],
+        "relations" : [ "11" ]
+      }, {
+        "id" : "6108fb6e11834fd28b2f866e1ef8579a",
+        "type" : "CFS_LE_SITE_CONNECTION",
+        "attributes" : [ {
+          "name" : "ServiceId",
+          "value" : "6108fb6e11834fd28b2f866e1ef8579a"
+        } ],
+        "relations" : [ "347f152864a947238562fd85ec05817e" ]
+      }, {
+        "id" : "20",
+        "type" : "CFS_LE_VLAN_DECL",
+        "attributes" : [ {
+          "name" : "ServiceId",
+          "value" : "20"
+        }, {
+          "name" : "CpeIp",
+          "value" : "192.168.1.3"
+        }, {
+          "name" : "VpeIp",
+          "value" : "192.168.1.2"
+        }, {
+          "name" : "NetworkIp",
+          "value" : "192.168.1.0"
+        }, {
+          "name" : "NetworkCidr",
+          "value" : "24"
+        }, {
+          "name" : "VlanTag",
+          "value" : "1"
+        }, {
+          "name" : "VoiceGoi",
+          "value" : "false"
+        }, {
+          "name" : "DhcpEnabled",
+          "value" : "true"
+        }, {
+          "name" : "DhcpRangeStart",
+          "value" : "192.168.1.33"
+        }, {
+          "name" : "DhcpRangeEnd",
+          "value" : "192.168.1.127"
+        }, {
+          "name" : "DnsServerPrimary",
+          "value" : "192.168.1.201"
+        }, {
+          "name" : "DnsServerSecondary",
+          "value" : "192.168.1.202"
+        }, {
+          "name" : "DhcpLeaseTime",
+          "value" : "3600"
+        }, {
+          "name" : "CustomerDomainName",
+          "value" : "myDomain"
+        }, {
+          "name" : "MergedOptionNumbers",
+          "value" : "42"
+        }, {
+          "name" : "MergedOptionTypes",
+          "value" : "ip-address"
+        }, {
+          "name" : "MergedOptionValues",
+          "value" : "192.168.1.2"
+        }, {
+          "name" : "Label",
+          "value" : "Corp"
+        } ],
+        "relations" : [ "18" ]
+      }, {
+        "id" : "22",
+        "type" : "CFS_LE_VLAN_DECL",
+        "attributes" : [ {
+          "name" : "ServiceId",
+          "value" : "22"
+        }, {
+          "name" : "VpeIp",
+          "value" : "192.168.2.2"
+        }, {
+          "name" : "NetworkIp",
+          "value" : "192.168.2.0"
+        }, {
+          "name" : "NetworkCidr",
+          "value" : "24"
+        }, {
+          "name" : "VlanTag",
+          "value" : "1100"
+        }, {
+          "name" : "VoiceGoi",
+          "value" : "false"
+        }, {
+          "name" : "DhcpEnabled",
+          "value" : "true"
+        }, {
+          "name" : "DhcpRangeStart",
+          "value" : "192.168.2.33"
+        }, {
+          "name" : "DhcpRangeEnd",
+          "value" : "192.168.2.127"
+        }, {
+          "name" : "DnsServerPrimary",
+          "value" : "192.168.2.201"
+        }, {
+          "name" : "DnsServerSecondary",
+          "value" : "192.168.2.202"
+        }, {
+          "name" : "DhcpLeaseTime",
+          "value" : "3600"
+        }, {
+          "name" : "CustomerDomainName",
+          "value" : "myDomain"
+        }, {
+          "name" : "MergedOptionNumbers",
+          "value" : "42"
+        }, {
+          "name" : "MergedOptionTypes",
+          "value" : "ip-address"
+        }, {
+          "name" : "MergedOptionValues",
+          "value" : "192.168.2.2"
+        }, {
+          "name" : "Label",
+          "value" : "VlanLabel-2"
+        } ],
+        "relations" : [ "6108fb6e11834fd28b2f866e1ef8579a" ]
+      } ]
+    } ]
+  }
+  

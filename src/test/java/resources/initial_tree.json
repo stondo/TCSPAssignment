@@ -1,0 +1,24 @@
+{
+  "id": "rootId",
+  "type": "ROOT",
+  "attributes": [
+    { "name": "ServiceId", "value": "rootServiceId" },
+    { "name": "Version", "value": "1003" }
+  ],
+  "children": [
+    { "id": "id-1",
+      "type": "ONLY_IN_INITIAL",
+      "attributes": [
+        { "name": "ServiceId", "value": "serviceId-1" }
+      ],
+      "relations": [ "id-2" ]
+    }, {
+      "id": "id-2",
+      "type": "IN_BOTH_TREES",
+      "attributes": [
+        { "name": "OnlyInInitial", "value": "toBeDeleted" },
+        { "name": "ValueChange", "value": "oldValue" }
+      ]
+    }
+  ]
+}
