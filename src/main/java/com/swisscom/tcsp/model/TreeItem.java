@@ -6,12 +6,12 @@ import java.util.List;
 
 @JsonInclude(JsonInclude.Include.NON_EMPTY)
 public record TreeItem(
-        @JsonProperty("identifier")
-        @JsonAlias("id")
+        @JsonProperty("id")
+        @JsonAlias("identifier")
         String id,
 
-        @JsonProperty("brickId")
-        @JsonAlias("type")
+        @JsonProperty("type")
+        @JsonAlias("brickId")
         String type,
 
         String operation,
