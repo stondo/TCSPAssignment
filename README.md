@@ -74,7 +74,7 @@ A Dockerfile is provided to build and run the application in a container. The Do
 ```
 
 ### Run the Docker Container
-A Dockerfile is provided to build and run the application in a container. The Dockerfile sets up an output volume so that the generated order.json can be accessed from the host.
+A Dockerfile is provided to build and run the application in a container.
 ```bash
   docker run --rm tcsp-app
 ```
